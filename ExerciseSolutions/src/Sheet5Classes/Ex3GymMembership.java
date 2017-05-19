@@ -9,7 +9,7 @@ class GymMembership {
 	private String payment;
 	
 	public GymMembership () {
-		memberNo = memberCounter;
+		memberNo = memberCounter; 
 		memberCounter++;
 		payment = "Monthly";//default
 	}

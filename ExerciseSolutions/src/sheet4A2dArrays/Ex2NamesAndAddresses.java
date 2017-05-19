@@ -26,15 +26,14 @@ public class Ex2NamesAndAddresses {
 				System.out.println("Address for : " + addresses[i][0]);
 				for (int j = 1; j <addresses[i].length; j++){
 					System.out.println(addresses[i][j]);
-					break;
-
+					
 				}
+				break;
 			}
 		}
 		if (!isFound) {
 			System.out.println(name + " not found");
 		}
-
 
 	}	
 }

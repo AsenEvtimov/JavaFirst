@@ -21,17 +21,26 @@ public class Ex8ordSystem {
 			System.out.printf("%-16d%-16s€%7.2f\n", 
 					refNums[i], productNames[i], prices[i]);
 		}
+
+
+		String strRefNumber = JOptionPane.showInputDialog(null, "Please enter a reference number");
 		
+		int intRefNum = Integer.parseInt(strRefNumber);
 		
-		String strRefNumber = JOptionPane.showInputDialog("Please enter a reference number");
-		int refNumber = Integer.parseInt(strRefNumber);
-		
+		boolean isFound = false;
+
 		for (int i = 0; i < refNums.length; i++){
-			if (refNumber == refNums[i]) {
-				System.out.println(productNames[i]);
+			if (refNums[i] == intRefNum) {
+				isFound = true;
+				System.out.println(productNames[i] + " " + prices[i]);
+				break;
 			}
+			
 		}
+		if (!isFound){
+			System.out.println("Reference number not found");
 		}
+	}
 }
 
 
