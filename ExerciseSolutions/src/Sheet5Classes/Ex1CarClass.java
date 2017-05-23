@@ -1,14 +1,14 @@
 package Sheet5Classes;
 
-class CarClass {
+public class Ex1CarClass {
 
 	private String make;
 	private String model;
 	private double engine;
 	
-	public CarClass () {}
+	public Ex1CarClass () {}
 	
-	public CarClass (String make, String model, double engine) {
+	public Ex1CarClass (String make, String model, double engine) {
 		
 		setMake(make);
 		setModel(model);
@@ -26,18 +26,18 @@ class CarClass {
 	}
 	
 	public void setEngine(double engine) { 
-		
+		this.engine = engine;
 	}
 	
-	String getMake(){
+	public String getMake(){
 		return make;
 	}
 	
-	String getModel () {
+	public String getModel () {
 		return model;		
 	}
 	
-	double getEngine () {
+	public double getEngine () {
 		return engine;
 	}
 	

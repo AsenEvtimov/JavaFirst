@@ -32,7 +32,19 @@ public class Ex8ordSystem {
 		for (int i = 0; i < refNums.length; i++){
 			if (refNums[i] == intRefNum) {
 				isFound = true;
-				System.out.println(productNames[i] + " " + prices[i]);
+				//System.out.println(productNames[i] + " " + prices[i]);
+				
+				JOptionPane.showMessageDialog(null, String.format("Product %s: price €%.2f", 
+						productNames[i], prices[i]));
+				
+				String strQuantity = JOptionPane.showInputDialog("Please enter a quantit");
+				int quantity = Integer.parseInt(strQuantity);
+				
+				double total = quantity*prices[i];
+				
+				JOptionPane.showMessageDialog(null, String.format("Order for product %s; quantity: %d Total cost: %.2f",
+						productNames[i], quantity, total));
+						
 				break;
 			}
 			
