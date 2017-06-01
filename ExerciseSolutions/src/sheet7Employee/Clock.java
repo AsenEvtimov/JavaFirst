@@ -7,20 +7,18 @@ public class Clock {
 	private int minute;
 	
 	public Clock () {
-		hour = 0;
-		minute = 0;
-		second = 0;
-		
+				
 	}
 	
 	public Clock (int hour, int minute, int second) {
 		
+		
 		setHour(hour);
 		setMinute(minute);
 		setSecond(second);
-		resetClock();
+		
 	}
-
+	
 	public int getHour() {
 		return hour;
 	}
@@ -51,8 +49,28 @@ public class Clock {
 		second = 0;
 	}
 	
-	public void incrementHour(int addhour){
-		this.hour = addhour;
+	public void incrementTime (int addHours, int addMinutes, int addSeconds){
+		
+		
+		if ((second + addSeconds) > 59){
+			minute = minute + ((second + addSeconds)/60);
+			second = ((second + addSeconds) % 60);
+		}else {
+			second += addSeconds;
+		}
+		
+		if ((minute + addMinutes) > 59){
+			hour = hour + ((minute + addMinutes)/60);
+			minute = ((minute + addMinutes) % 60);
+		}else {
+			minute += addMinutes;
+		}
+		
+		if ((hour + addHours) > 23) {
+			hour = ((hour + addHours) % 24);
+		} else {
+			hour += addHours;
+		}
 	}
 
 	@Override

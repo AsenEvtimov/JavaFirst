@@ -20,7 +20,7 @@ public class PCarray {
 				new PersonalComputer (PersonalComputer.RAM_8_GB, PersonalComputer.HD_1_TB, OS.OS_WIN_10, MonitorSize.MONITOR_36)};
 		
 		for (int i = 0; i < allPC.length; i++) {
-			allPC[i].setPrice();
+			//allPC[i].setPrice();
 			if (allPC[i].getPrice() > 400) {
 				System.out.println(allPC[i] + "\n");
 			}
