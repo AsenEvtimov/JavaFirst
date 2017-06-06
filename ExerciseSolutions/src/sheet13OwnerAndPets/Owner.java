@@ -52,5 +52,10 @@ public class Owner {
 	public void setPet(Pet[] pets) {
 		this.pets = pets;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Owner: " + name + ", Address: " + address + ", phone: " + phone ;
+	}
+		
 }

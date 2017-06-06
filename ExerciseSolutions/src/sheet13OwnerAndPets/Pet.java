@@ -1,6 +1,6 @@
 package sheet13OwnerAndPets;
 
-public class Pet {
+public abstract class Pet {
 
 	private String name;
 	private String breed;
@@ -9,7 +9,7 @@ public class Pet {
 	private boolean isFemale;
 	
 	public static final boolean FEMALE = true;
-	public static final boolean MALE = true;
+	public static final boolean MALE = false;
 	
 	public static int PetID = 5000;
 	
@@ -19,6 +19,7 @@ public class Pet {
 	
 	public Pet (String name, String breed, int age,
 			String color, boolean isFemale) {
+		this();
 		setName(name);
 		setBreed(breed);
 		setAge(age);
@@ -64,6 +65,18 @@ public class Pet {
 
 	public void setFemale(boolean isFemale) {
 		this.isFemale = isFemale;
+	}
+	
+	public abstract String getTypeOfAnimal();
+
+	@Override
+	public String toString() {
+		return "\nAnimal: " + getTypeOfAnimal() +
+				"\nPet name: " + name + 
+				"\nBreed: " + breed + 
+				"\nAge: " + age + 
+				"\nColor: " + color + 
+				"\nGender: " + (isFemale ? "Female" : "Male");				
 	}
 	
 }
