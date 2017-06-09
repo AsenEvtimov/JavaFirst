@@ -2,7 +2,7 @@ package sheet12CustomerWithPizzaArray;
 
 public class MainForPizza {
 
-	public static void main(String[] args) {
+	public static void main(String [] args) {
 
 		Pizza p1 = new Pizza (new String [] {"Tomato", "Cheese", "Ham", "Mushrooms"},
 							PizzaSize.SMALL);
