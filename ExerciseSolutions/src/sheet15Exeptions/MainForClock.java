@@ -6,8 +6,8 @@ public class MainForClock {
 
 		Clock c1 = new Clock();
 		try {
-			c1.setHour(12);
-			c1.setMinute(60);
+			c1.setHour(11);
+			c1.setMinute(59);
 			c1.setSecond(60);
 		} catch (InvalidTimeExeption e) {
 			System.out.println(e.getMessage());
